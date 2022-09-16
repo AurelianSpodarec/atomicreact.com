@@ -1,0 +1,1 @@
+Note that the spotify API is a placeholder on how you should structure your services/apis

@@ -1,0 +1,25 @@
+// ==========================================================================
+// # Fonts
+// ==========================================================================
+//
+//
+//  - Example font
+//
+//
+
+
+// # Fonts: Example Font
+// ==========================================================================
+
+
+@font-face {
+    font-family: 'test';
+    src: url('fonts/your-font.eot');
+    src: url('fonts/your-font.eot?') format('embedded-opentype'),
+         url('fonts/your-font.woff2') format('woff2'),
+         url('fonts/your-font.woff') format('woff'),
+         url('fonts/your-font.ttf') format('truetype'),
+         url('fonts/your-font.svg#your-font') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
