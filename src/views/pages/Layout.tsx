@@ -1,20 +1,19 @@
 import { BrowserRouter } from "react-router-dom";
 import CustomRoutes from "routes/CustomRoutes";
+import Navigation from "./_components/Navigation/Navigation";
 
 function Layout() {
     return (
         <BrowserRouter>
         <div>
             
-            <header>
-                Header
-            </header>
+            <div className="flex">
+                <Navigation />
 
-                <CustomRoutes />
-
-            <footer>
-                Footer
-            </footer>
+                <div className="flex flex-1 flex-col">
+                    <CustomRoutes />
+                </div>
+            </div>
 
         </div>
         </BrowserRouter>
