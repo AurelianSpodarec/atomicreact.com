@@ -8,6 +8,7 @@ function Button(props:ButtonProps) {
     const {
         children,
         label = "",
+        onClick,
         as = "button",
         href,
         variant = "primary",
@@ -29,6 +30,7 @@ function Button(props:ButtonProps) {
             href={href}
             type={type}
             ref={ref}
+            onClick={onClick}
             disabled={disabled}
             className={classNames(
                 prefix,
@@ -47,6 +49,7 @@ export default Button;
 interface ButtonProps {
     className?: string;
     children?: React.ReactNode;
+    onClick?: any;
     ref?: any;
     label?: string;
     as?: string | "a" | "button";

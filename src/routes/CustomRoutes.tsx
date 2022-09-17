@@ -1,7 +1,8 @@
 import { useRoutes } from "react-router-dom";
 
 import NotFound from "./../views/pages/NotFound";
-import Home from "./../views/pages/Home";
+
+import ButtonIndex from "../views/pages/Components/Button/ButtonIndex";
 
 function CustomRoutes() {
     let routes = useRoutes([
@@ -10,8 +11,8 @@ function CustomRoutes() {
             element: <NotFound />
         },
         {
-            path: "/",
-            element: <Home />
+            path: "/button",
+            element: <ButtonIndex />
         }
     ]);
 
