@@ -1,0 +1,58 @@
+// ==========================================================================
+// # Button
+// ==========================================================================
+
+
+.button {
+
+    &-solid {
+        &.button-primary {
+            // bg-brand-600
+            @apply bg-indigo-600
+        }
+    
+        &.button-secondary {
+            @apply bg-pink-600
+        }
+
+        &.button-link {
+            
+        }
+
+        &.button-success {
+    
+        }
+
+        &.button-warning {
+            
+        }
+    
+        &.button-danger {
+    
+        }
+
+        &.button-info {
+    
+        }
+
+    }
+
+    &-outline {
+        &.button-primary {
+        }
+
+        &.button-secondary {
+
+        }
+
+        &.button-link {
+
+        }
+
+    }
+
+    &.button-md {
+
+    }
+
+}

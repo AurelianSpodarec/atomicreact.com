@@ -6,7 +6,7 @@ function Layout() {
     return (
         <BrowserRouter>
         <div>
-            
+    
             <div className="flex">
                 <Navigation />
 

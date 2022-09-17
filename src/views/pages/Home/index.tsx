@@ -1,3 +1,5 @@
+import Button from './../../atoms/Button/Button';
+
 function Home() {
     return (
         <main className="overflow-hidden">
@@ -5,10 +7,10 @@ function Home() {
                 header
             </div>
             <div className="flex-1" id="example">
-        d
+            <Button>Hello</Button>
             </div>
             <div id="docs">
-sd
+                sd
             </div>
             <footer>
                 Footer
