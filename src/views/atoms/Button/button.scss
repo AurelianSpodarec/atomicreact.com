@@ -8,7 +8,12 @@
 // - Kind: Solid, Outline, Ghost
 //
 
+
+// TODO: Swap any colors to use proper tailwindcss config e.g. bg-indigo-600 should be bg-brand-600
+// TODO: Make button text dynamic
+
 .button {
+    color: white;
 
     &.button-md {
 
@@ -17,11 +22,13 @@
     &-solid {
         &.button-primary {
             // bg-brand-600
-            @apply bg-indigo-600
+            @apply 
+            bg-indigo-600
         }
     
         &.button-secondary {
-            @apply bg-pink-600
+            @apply 
+            bg-pink-600
         }
 
         &.button-link {

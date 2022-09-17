@@ -1,59 +1,64 @@
 import React from 'react';
 import classNames from 'classnames';
 
-function Button(props:Props) {
+// TODO: If 'href' is provided, automatically render 'a' tag and ovveride any input in 'as'.
+// TODO: Create reusable types for sizes
+
+function Button(props:ButtonProps) {
     const {
         children,
         label = "",
         as = "button",
-        // href = false,
+        href,
         variant = "primary",
         kind = "solid",
         type = "button",
         size = "md",
         radius = "md",
-        // disabled = false,
+        ref,
+        disabled,
     } = props;
 
     const prefix = "button";
 
-    const Tag = as;
-    const labell = label || children;
+    const Tag = `${as}` as React.ElementType;
+    const content = label || children;
 
     return (
         <Tag 
+            href={href}
             type={type}
+            ref={ref}
+            disabled={disabled}
             className={classNames(
                 prefix,
-                variant && `${prefix}-${variant}`,
                 kind && `${prefix}-${kind}`,
+                variant && `${prefix}-${variant}`,
                 size && `${prefix}-${size}`,
             )} 
-            // href={href}
-            // disabled={disabled}
         >
-            {labell}
+            {content}
         </Tag>
     )
 }
 
 export default Button;
 
-interface Props {
+interface ButtonProps {
     className?: string;
     children?: React.ReactNode;
+    ref?: any;
     label?: string;
     as?: string | "a" | "button";
     variant?: string | "primary" | "secondary" | "link";
-    kind?: string | "solid" | "outline" | "ghost";
+    kind?: string | "solid" | "outline" | "ghost" | "subtle";
     type?: string | "submit" | "button" | "reset";
     size?: string | "md";
     radius?: string | "md";
-    // href?: string; only allowed if as is an 'a'
     href?: string;
     block?: boolean;
     active?: boolean;
-    // disabled?: boolean;
+    disabled?: boolean;
     isLoading?: boolean;
 
     icon?: any;
