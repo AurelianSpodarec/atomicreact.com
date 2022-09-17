@@ -14,6 +14,10 @@ function Navigation() {
             
             <ul>
                 Page Examples
+                /examples
+
+                /examples/sites - show all page examples
+                /examples/sites/:id - show single page example
                 Documents
                 Components
             </ul>
