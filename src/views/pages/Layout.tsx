@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import CustomRoutes from "routes/CustomRoutes";
+import CustomRoutes from "./../../routes/CustomRoutes";
 import Navigation from "./_components/Navigation/Navigation";
 
 function Layout() {

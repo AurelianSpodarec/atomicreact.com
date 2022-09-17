@@ -1,9 +1,18 @@
 // ==========================================================================
 // # Button
 // ==========================================================================
-
+//
+// Table of Content
+//
+// - Size
+// - Kind: Solid, Outline, Ghost
+//
 
 .button {
+
+    &.button-md {
+
+    }
 
     &-solid {
         &.button-primary {
@@ -38,21 +47,48 @@
     }
 
     &-outline {
-        &.button-primary {
-        }
-
-        &.button-secondary {
-
-        }
-
         &.button-link {
+            
+        }
 
+        &.button-success {
+    
+        }
+
+        &.button-warning {
+            
+        }
+    
+        &.button-danger {
+    
+        }
+
+        &.button-info {
+    
         }
 
     }
 
-    &.button-md {
+    &-ghost {
+        &.button-link {
+            
+        }
 
+        &.button-success {
+    
+        }
+
+        &.button-warning {
+            
+        }
+    
+        &.button-danger {
+    
+        }
+
+        &.button-info {
+    
+        }
     }
 
 }
