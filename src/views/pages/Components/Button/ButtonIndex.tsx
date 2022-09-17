@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Preview from './../../_components/Preview/Preview';
 import Button from '../../../atoms/Button/Button';
-
+import RadioButton from './../../../atoms/Forms/Radio/RadioButton/RadioButton';
 
 const tabs = [
     { name: 'Overview', href: '#', current: false },
@@ -15,12 +15,14 @@ function ButtonIndex() {
     const [kind, setKind] = useState("solid")
 
     function handleChangeVariant(value:any) {
-        setVariant(value)
+        setVariant(value.target.value)
     }
 
     function handleChangeKind(value:any) {
-        setKind(value)
+        setKind(value.target.value)
     }
+
+
 
     return (
         <main className="overflow-hidden h-full">
@@ -55,60 +57,29 @@ function ButtonIndex() {
 
                 <div>
                      
-                    <div>
+                    <div className="flex items-center">
                         <h3 className="text-2xl">Variant</h3>
                         <div className="space-4">
-                            <Button onClick={() => handleChangeVariant('primary')}>Primary</Button>
-                            <Button onClick={() => handleChangeVariant('secondary')}>Secondary</Button>
+                            <RadioButton className={variant === "primary" ? "bg-pink-400" : ""} label="Primary" onChange={(e:any) => handleChangeVariant(e)} name="kind" value="primary" />
+                            <RadioButton className={variant === "secondary" ? "bg-pink-400" : ""} label="Secondary" onChange={(e:any) => handleChangeVariant(e)} name="kind" value="secondary" />
+                             
                         </div>
                     </div>
-                    Kind:
-                    <Button onClick={() => handleChangeKind('solid')}>solid</Button>
-                    <Button onClick={() => handleChangeKind('outline')}>outline</Button>
-                    <Button onClick={() => handleChangeKind('ghost')}>ghost</Button>
+                    
+                    <div className="flex items-center">
+                        <h3 className="text-2xl">Kind:</h3>
+                        <RadioButton className={kind === "solid" ? "bg-pink-400" : ""} label="Solid" onChange={(e:any) => handleChangeKind(e)} name="kind" value="solid" />
+                        <RadioButton className={kind === "outline" ? "bg-pink-400" : ""} label="Outline" onChange={(e:any) => handleChangeKind(e)} name="kind" value="outline" />
+                        <RadioButton className={kind === "ghost" ? "bg-pink-400" : ""} label="Ghost" onChange={(e:any) => handleChangeKind(e)} name="kind" value="ghost" />
+                    </div>
                 
                 </div>
                 
                 
             </div>
-            
-            {/* <div id="docs">
-                sd
-            </div>
-
-            <footer>
-                Footer
-            </footer> */}
+           
         </main>
     )
 }
 
 export default ButtonIndex;
-
-
-
-
-
-
-
-
-
-
-
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
- 
