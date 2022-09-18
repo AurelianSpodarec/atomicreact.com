@@ -10,6 +10,35 @@ const tabs = [
     { name: 'API', href: '#', current: true }
 ]
 
+
+function ColorSelect({onChange, label, name, variant, value, color}:any) {
+    return (
+        <RadioButton 
+            className={`flex w-full p-2 border border-gray-100 rounded-md ${variant === value ? "bg-gray-100" : ""}`} 
+            label={label} 
+            onChange={onChange} 
+            name={name} 
+            value={value}
+            componentLeft={<div className={`${color} w-6 h-6 rounded-full`}></div>}
+
+        />
+    )
+}
+
+function Case({title, children}:any) {
+    return (
+        <div className="items-center px-8">
+                    
+            <h3 className="text-2xl mr-10  py-6">{title}</h3>
+
+            <div className="flex flex space-y-6">
+                {children}
+            </div>
+        
+        </div>
+    )
+}
+
 function ButtonIndex() {
 
     const [variant, setVariant] = useState("primary")
@@ -31,8 +60,167 @@ function ButtonIndex() {
 
 
     return (
-        <main className="overflow-hidden h-full">
+        <main className="overflow-hidden h-full w-full">
+            <div className="flex h-full">
 
+                <div className="flex flex-1 flex-col">
+                    <div>
+                        <div className="p-6">
+                            <h1 className="text-4xl font-bold">Button</h1>
+                        </div>
+                    </div>
+
+                <div>
+                    <div className="h-[550px] bg-gray-50">
+                    <div className="flex items-center justify-center h-full">
+                        <Button 
+                            variant={variant} 
+                            kind={kind}
+                            disabled={disabled}
+                        >
+                            Hello
+                        </Button>
+                    </div>
+                    </div>
+                    
+                    <div className="h-[300px] h-full">
+                    <Case title="Variant">
+                            <ColorSelect
+                                label="Link"
+                                variant={variant}
+                                onChange={(e:any) => handleChangeVariant(e)} 
+                                name="variant" 
+                                value="link"
+                             />
+                             <ColorSelect
+                                label="Primary"
+                                variant={variant}
+                                onChange={(e:any) => handleChangeVariant(e)} 
+                                name="variant" 
+                                value="primary"
+                                color="bg-indigo-600"
+                             />
+                           <ColorSelect
+                                label="Secondary"
+                                variant={variant}
+                                onChange={(e:any) => handleChangeVariant(e)} 
+                                name="variant" 
+                                value="secondary"
+                                color="bg-pink-600"
+                             />
+                           <ColorSelect
+                                label="Success"
+                                variant={variant}
+                                onChange={(e:any) => handleChangeVariant(e)} 
+                                name="variant" 
+                                value="success"
+                             />
+                           <ColorSelect
+                                label="Warning"
+                                variant={variant}
+                                onChange={(e:any) => handleChangeVariant(e)} 
+                                name="variant" 
+                                value="warning"
+                             />
+                            <ColorSelect
+                                label="Danger"
+                                variant={variant}
+                                onChange={(e:any) => handleChangeVariant(e)} 
+                                name="variant" 
+                                value="danger"
+                             />
+                            <ColorSelect
+                                label="Info"
+                                variant={variant}
+                                onChange={(e:any) => handleChangeVariant(e)} 
+                                name="variant" 
+                                value="info"
+                             />
+                       </Case>
+
+                       <Case title="Kind">
+                            <ColorSelect
+                                label="Solid"
+                                variant={kind}
+                                onChange={(e:any) => handleChangeKind(e)} 
+                                name="kind" 
+                                value="solid"
+                            />
+                            <ColorSelect
+                                label="Outline"
+                                variant={kind}
+                                onChange={(e:any) => handleChangeKind(e)} 
+                                name="kind" 
+                                value="outline"
+                            />
+                            <ColorSelect
+                                label="Ghost"
+                                variant={kind}
+                                onChange={(e:any) => handleChangeKind(e)} 
+                                name="kind" 
+                                value="ghost"
+                            />
+                       </Case>
+
+                       <Case title="Is Disabled">
+
+                       </Case>
+
+                       <Case title="Size">
+
+                       </Case>
+                
+                       <Case title="Type">
+
+                       </Case>
+
+                        <Case title="Radius">
+                        
+                       </Case>
+
+                       <Case title="As">
+                        
+                       </Case>
+
+                       <Case title="Is Loading">
+                        
+                       </Case>
+                    </div>
+                    </div>
+                </div>
+
+                <aside className="border-l-2 border-gray-100 overflow-auto h-full w-[320px]">
+                <div className="flex flex-wrap items-center overflow-hidden">
+                <div className="overflow-y-auto">
+                    <div className="h-full w-full">
+                    <Editor
+                            height="100%"
+                            width="100%"
+                            theme="vs-dark"
+                            defaultLanguage="javascript"
+                            defaultValue={`
+                            <Button 
+                                variant="${variant}" 
+                                kind="${kind}"
+                                disabled="${disabled}"
+                            >
+                                Hello
+                            </Button>`}
+                        />
+</div>
+                       
+
+                </div>
+                </div>
+                </aside>
+            </div>
+
+
+
+
+
+
+{/* 
             <div className="sticky top-0 z-10 flex items-center justify-between p-4 h-16 flex-shrink-0 bg-white shadow">
                 <div className="flex items-center">
                     <h1 className="font-bold text-4xl">Button</h1>
@@ -55,120 +243,14 @@ function ButtonIndex() {
             <Preview>
             <div className="flex h-full">
             
-                <div className="relative  p-12 w-1/2">
-                    <div className="absolute bg-white border border-gray-200 px-4 py-2 right-1/2 translate-x-2/4 rounded-2xl">
-                        Zoom Outzoom
-                    </div>
-
-                    <div className="flex items-center justify-center h-full">
-                    <Button 
-                        variant={variant} 
-                        kind={kind}
-                        disabled={disabled}
-                    >
-                        Hello
-                    </Button>
-                    </div>
-                </div>
-
+                
                 <div className="w-1/2 bg-gray-800 text-white h-full">
                
                 <div>
                      
-                    <div className="flex items-center">
-                    <div className="items-center px-8">
+                  
                     
-
-                        <h3 className="text-2xl mr-10  py-6">Variant</h3>
-                        <div className="space-x-6">
-                            <RadioButton 
-                                className={`p-2 border border-gray-100 rounded-md ${variant === "link" ? "bg-pink-400" : ""}`} 
-                                label="Link" 
-                                onChange={(e:any) => handleChangeVariant(e)} 
-                                name="kind" 
-                                value="link"
-                            />
-                            <RadioButton 
-                                className={`p-2 border border-gray-100 rounded-md ${variant === "primary" ? "bg-pink-400" : ""}`} 
-                                label="Primary" 
-                                onChange={(e:any) => handleChangeVariant(e)} 
-                                name="kind" 
-                                value="primary"
-                            />
-                            <RadioButton 
-                                className={`p-2 border border-gray-100 rounded-md ${variant === "secondary" ? "bg-pink-400" : ""}`} 
-                                label="Secondary" 
-                                onChange={(e:any) => handleChangeVariant(e)} 
-                                name="kind" 
-                                value="secondary"
-                            />
-                            <RadioButton 
-                                className={`p-2 border border-gray-100 rounded-md ${variant === "success" ? "bg-pink-400" : ""}`} 
-                                label="Success" 
-                                onChange={(e:any) => handleChangeVariant(e)} 
-                                name="kind" 
-                                value="success"
-                            />
-                            <RadioButton 
-                                className={`p-2 border border-gray-100 rounded-md ${variant === "warning" ? "bg-pink-400" : ""}`} 
-                                label="Warning" 
-                                onChange={(e:any) => handleChangeVariant(e)} 
-                                name="kind" 
-                                value="warning"
-                            />
-                            <RadioButton 
-                                className={`p-2 border border-gray-100 rounded-md ${variant === "danger" ? "bg-pink-400" : ""}`} 
-                                label="Danger" 
-                                onChange={(e:any) => handleChangeVariant(e)} 
-                                name="kind" 
-                                value="danger"
-                            />
-                            <RadioButton 
-                                className={`p-2 border border-gray-100 rounded-md ${variant === "info" ? "bg-pink-400" : ""}`} 
-                                label="Info" 
-                                onChange={(e:any) => handleChangeVariant(e)} 
-                                name="kind" 
-                                value="info"
-                            />
-                        </div>
-                    
-
-                    </div>
-                    </div>
-
-
-                    
-                    <div className="flex items-center">
-                    <div className="flex items-center px-8 py-6">
-
-                        <h3 className="text-2xl mr-10">Kind:</h3>
-
-                        <div className="space-x-6">
-                            <RadioButton 
-                                className={`p-2 border border-gray-100 rounded-md ${kind === "solid" ? "bg-pink-400" : ""}`} 
-                                label="Solid" 
-                                onChange={(e:any) => handleChangeKind(e)} 
-                                name="kind" 
-                                value="solid"
-                            />
-                            <RadioButton 
-                                className={`p-2 border border-gray-100 rounded-md ${kind === "outline" ? "bg-pink-400" : ""}`} 
-                                label="Outline" 
-                                onChange={(e:any) => handleChangeKind(e)} 
-                                name="kind" 
-                                value="outline"
-                            />
-                            <RadioButton 
-                                className={`p-2 border border-gray-100 rounded-md ${kind === "ghost" ? "bg-pink-400" : ""}`} 
-                                label="Ghost" 
-                                onChange={(e:any) => handleChangeKind(e)} 
-                                name="kind" 
-                                value="ghost"
-                            />
-                        </div>
-
-                    </div>
-                    </div>
+                   
 
 
 
@@ -215,7 +297,7 @@ function ButtonIndex() {
 </Button>`}
                 />
 
-            </div>
+            </div> */}
            
         </main>
     )
