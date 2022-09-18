@@ -53,7 +53,7 @@ interface ButtonProps {
     ref?: any;
     label?: string;
     as?: string | "a" | "button";
-    variant?: string | "primary" | "secondary" | "link";
+    variant?: string | "primary" | "secondary" | "link" | "success" | "warning" | "danger" | "info";
     kind?: string | "solid" | "outline" | "ghost" | "subtle";
     type?: string | "submit" | "button" | "reset";
     size?: string | "md";
