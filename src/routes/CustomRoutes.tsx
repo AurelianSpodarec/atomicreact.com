@@ -11,7 +11,7 @@ function CustomRoutes() {
             element: <NotFound />
         },
         {
-            path: "/button",
+            path: "/atoms/button",
             element: <ButtonIndex />
         }
     ]);
