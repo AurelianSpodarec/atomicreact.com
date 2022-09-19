@@ -8,27 +8,14 @@ function Layout() {
         <BrowserRouter>
         
         <Header />
-        
+
         <div className="overflow-hidden">
-        {/* <div className="relative overflow-hidden h-screen"> */}
-        {/* <div className="flex flex-col h-full overflow-hidden"> */}
-
-
-            {/* <div className="flex overflow-hidden"> */}
-                <Navigation />
-                <main className="lg:pl-[310px]">
-                dsd  <br/>
-                dsd  <br/>
-                dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>dsd  <br/>               
-                </main>
-                {/* <div className="flex flex-1 flex-col">
-                    <CustomRoutes />
-                </div> */}
-            {/* </div> */}
-        
-
-        {/* </div> */}
-        {/* // </div> */}
+            <Navigation />
+            
+            <main className="lg:pl-[310px]">
+                <CustomRoutes />
+            </main>
+               
         </div>
 
         </BrowserRouter>

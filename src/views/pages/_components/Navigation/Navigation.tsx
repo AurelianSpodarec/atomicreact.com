@@ -9,14 +9,14 @@ import { NavLink } from "react-router-dom";
 function NavItem({title, href}:any) {
     return (
         <li className="w-full">
-            <NavLink to="/atoms/button" className="w-full">{title}</NavLink>
+            <NavLink to="/atoms/button" className={`${({ isActive }:any) => isActive ? "bg-[#2a2b2f]" : ""} hover:bg-gray-800 w-full text-gray-50 p-3 block`}>{title}</NavLink>
         </li>
     )
 }
 
 function Navigation() {
     return (
-        <div className="fixed bg-gray-100 h-screen w-[310px]">
+        <div className="fixed bg-[#202125] h-screen w-[310px]">
         <nav className="flex-1 space-y-1 p-8">
 
            
@@ -35,8 +35,8 @@ function Navigation() {
                 Components
             </ul> */}
 
-            <h3 className="font-bold text-xl">Atoms</h3>
-            <ul className="flex flex-wrap">
+            <h3 className="font-bold text-white text-xl">Atoms</h3>
+            <ul className="flex flex-wrap space-y-4">
                 <NavItem title="Button" href="/atoms/button" />
                 <NavItem title="Radio" href="/atoms/radio" />
                 <NavItem title="Checkbox" href="/atoms/checkbox" />
