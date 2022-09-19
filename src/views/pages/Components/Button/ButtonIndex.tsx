@@ -1,162 +1,59 @@
-import React, { useState } from 'react';
-import Preview from './../../_components/Preview/Preview';
-import Button from '../../../atoms/Button/Button';
-import RadioButton from './../../../atoms/Forms/Radio/RadioButton/RadioButton';
+import Button from "views/atoms/Button/Button"
+import Heading from "views/pages/_components/Heading/Heading"
 
-import CodeEditor from 'views/pages/_components/CodeEditor/CodeEditor';
-import Footer from 'views/pages/_components/Footer/Footer';
-import Playground, { Canvas, PlaygroundConfigView } from 'views/pages/_components/Playground/Playground';
-import PlaygroundView from 'views/pages/_components/Playground/Playground';
-
-
-
-
-function ColorSelect({onChange, label, name, variant, value, color}:any) {
+function ButtonIndex() {
     return (
-        <RadioButton 
-            className={`flex w-full p-2 border border-gray-100 rounded-md ${variant === value ? "bg-gray-100" : ""}`} 
-            label={label} 
-            onChange={onChange} 
-            name={name} 
-            value={value}
-            componentLeft={<div className={`${color} w-6 h-6 rounded-full`}></div>}
+        <div>
+            <Heading />
 
-        />
-    )
-}
+            <div className="flex">
+                <main className="flex-1 p-8">
+                    <h2>Examples</h2>
 
-function Case({title, children}:any) {
-    return (
-        <div className="items-center flex px-8">
-                    
-            <h3 className="text-2xl mr-10  py-6">{title}</h3>
+                    <div>
+                        <h3 className="text-xl font-bold">Solid Buttons</h3>
+                        <div className="w-full space-x-4">
+                            <Button label="Primary" variant="primary" />
+                            <Button label="Secondary" variant="secondary" />
+                            <Button label="Success" variant="success" />
+                            <Button label="Info" variant="info" />
+                            <Button label="Warning" variant="warning" />
+                            <Button label="Danger" variant="danger" />
+                        </div>
+                    </div>
 
-            <div className="flex flex space-y-6">
-                {children}
+                    <div>
+                        <h3 className="text-xl font-bold">Outline Buttons</h3>
+                        <div className="w-full space-x-4">
+                            <Button label="Primary" variant="primary" kind="outline" />
+                            <Button label="Secondary" variant="secondary" kind="outline" />
+                            <Button label="Success" variant="success" kind="outline" />
+                            <Button label="Info" variant="info" kind="outline" />
+                            <Button label="Warning" variant="warning" kind="outline" />
+                            <Button label="Danger" variant="danger" kind="outline" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-xl font-bold">Ghost Buttons</h3>
+                        <div className="w-full space-x-4">
+                            <Button label="Primary" variant="primary" kind="ghost" />
+                            <Button label="Secondary" variant="secondary" kind="ghost" />
+                            <Button label="Success" variant="success" kind="ghost" />
+                            <Button label="Info" variant="info" kind="ghost" />
+                            <Button label="Warning" variant="warning" kind="ghost" />
+                            <Button label="Danger" variant="danger" kind="ghost" />
+                        </div>
+                    </div>
+
+                </main>
+
+                <aside className="w-[320px]">
+                    TOC
+                </aside>
             </div>
-        
         </div>
     )
 }
 
-
-function ButtonIndex() {
-
-    const [variant, setVariant] = useState("primary")
-    const [kind, setKind] = useState("solid")
-    const [disabled, setDisabled] = useState(false)
-
-    function handleChangeVariant(value:any) {
-        setVariant(value.target.value)
-    }
-
-    function handleChangeKind(value:any) {
-        setKind(value.target.value)
-    }
-
-    function handleChangeDisabled() {
-        setDisabled(!disabled)
-    }
-
-
-    return (
-        <PlaygroundView>
-
-            <Canvas>
-                <Button 
-                    variant={variant} 
-                    kind={kind}
-                    disabled={disabled}
-                >
-                    Hello
-                </Button>
-            </Canvas>
-
-            <PlaygroundConfigView>
-                <Case title="Variant">
-                <ColorSelect
-                    label="Link"
-                    variant={variant}
-                    onChange={(e:any) => handleChangeVariant(e)} 
-                    name="variant" 
-                    value="link"
-                />
-                <ColorSelect
-                    label="Primary"
-                    variant={variant}
-                    onChange={(e:any) => handleChangeVariant(e)} 
-                    name="variant" 
-                    value="primary"
-                    color="bg-indigo-600"
-                />
-                <ColorSelect
-                    label="Secondary"
-                    variant={variant}
-                    onChange={(e:any) => handleChangeVariant(e)} 
-                    name="variant" 
-                    value="secondary"
-                    color="bg-pink-600"
-                />
-                <ColorSelect
-                    label="Success"
-                    variant={variant}
-                    onChange={(e:any) => handleChangeVariant(e)} 
-                    name="variant" 
-                    value="success"
-                />
-                <ColorSelect
-                    label="Warning"
-                    variant={variant}
-                    onChange={(e:any) => handleChangeVariant(e)} 
-                    name="variant" 
-                    value="warning"
-                />
-                <ColorSelect
-                    label="Danger"
-                    variant={variant}
-                    onChange={(e:any) => handleChangeVariant(e)} 
-                    name="variant" 
-                    value="danger"
-                />
-                <ColorSelect
-                    label="Info"
-                    variant={variant}
-                    onChange={(e:any) => handleChangeVariant(e)} 
-                    name="variant" 
-                    value="info"
-                />
-            </Case>
-
-            <Case title="Kind">
-                <ColorSelect
-                    label="Solid"
-                    variant={kind}
-                    onChange={(e:any) => handleChangeKind(e)} 
-                    name="kind" 
-                    value="solid"
-                />
-                <ColorSelect
-                    label="Outline"
-                    variant={kind}
-                    onChange={(e:any) => handleChangeKind(e)} 
-                    name="kind" 
-                    value="outline"
-                />
-                <ColorSelect
-                    label="Ghost"
-                    variant={kind}
-                    onChange={(e:any) => handleChangeKind(e)} 
-                    name="kind" 
-                    value="ghost"
-                />
-            </Case>
-            </PlaygroundConfigView>
-
-        </PlaygroundView>
-
-       
- 
-    )
-}
-
-export default ButtonIndex;
+export default ButtonIndex
