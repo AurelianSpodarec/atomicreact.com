@@ -2,13 +2,13 @@ import Link from "next/link";
 import { useRouter, } from "next/router";
 import clsx from "clsx";
 
-export function Navigation({ navigation, className, }) {
+function Navigation({ navigation, className, }:any) {
     let router = useRouter();
 
     return (
         <nav className={clsx("text-base lg:text-sm", className)}>
             <ul role="list" className="space-y-9">
-                {navigation.map((section) => (
+                {navigation.map((section:any) => (
                     <li key={section.title}>
                         <h2 className="font-display font-medium text-slate-900 dark:text-white">
                             {section.title}
@@ -17,7 +17,7 @@ export function Navigation({ navigation, className, }) {
                             role="list"
                             className="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200"
                         >
-                            {section.links.map((link) => (
+                            {section.links.map((link:any) => (
                                 <li key={link.href} className="relative">
                                     <Link
                                         href={link.href}
@@ -39,3 +39,5 @@ export function Navigation({ navigation, className, }) {
         </nav>
     );
 }
+
+export default Navigation;
