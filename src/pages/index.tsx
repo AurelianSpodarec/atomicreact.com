@@ -1,5 +1,7 @@
 import type { NextPage, } from "next";
 import Head from "next/head";
+import Link from "next/link";
+import PageLayout from "./_components/PageLayout";
 
 const Home: NextPage = () => {
     return (
@@ -10,7 +12,11 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main>
-                <p className="text-2xl">sdssdsd2233dsddssdsddssd</p>
+                <PageLayout>
+                    <p className="text-2xl">Home Page</p>
+                    <Link href="docs/installation">Installation</Link>
+                    <Link href="docs/hello">Hello</Link>
+                </PageLayout>
             </main>
         </div>
     );

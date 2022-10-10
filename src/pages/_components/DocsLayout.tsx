@@ -66,7 +66,7 @@ const navigation = [
 
  
 
-export function Layout({ children, title, tableOfContents, }:any) {
+function DocsLayout({ children, title, tableOfContents, }:any) {
     let router = useRouter();
     let isHomePage = router.pathname === "/";
     let allLinks = navigation.flatMap((section) => section.links);
@@ -119,3 +119,5 @@ export function Layout({ children, title, tableOfContents, }:any) {
         </>
     );
 }
+
+export default DocsLayout;
