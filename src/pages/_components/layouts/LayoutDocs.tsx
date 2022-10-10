@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState, } from "react";
 import Link from "next/link";
 import { useRouter, } from "next/router";
-import Navigation from "./Navigation";
+import Navigation from "../Navigation";
 import Prose from "@components/components/Prose";
 // import clsx from "clsx";
 
@@ -66,7 +66,7 @@ const navigation = [
 
  
 
-function DocsLayout({ children, title, tableOfContents, }:any) {
+function LayoutPage({ children, title, tableOfContents, }:any) {
     let router = useRouter();
     let isHomePage = router.pathname === "/";
     let allLinks = navigation.flatMap((section) => section.links);
@@ -120,4 +120,4 @@ function DocsLayout({ children, title, tableOfContents, }:any) {
     );
 }
 
-export default DocsLayout;
+export default LayoutPage;

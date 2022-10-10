@@ -9,15 +9,13 @@ function Navigation({ className, }:any) {
 
     return (
         <div className="fixed bg-[#202125] h-screen w-[310px] text-base lg:text-sm">
-            <nav className="flex-1 space-y-1 p-8">
-
+            <nav className="flex-1 space-y-1 p-8 sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5">
            
                 <div className="sticky top-0">
                     <input className="w-full" placeholder="Search" />
                 </div>
      
-
-                <ul role="list" className="space-y-9">
+                <ul role="list" className="space-y-9 text-white">
                     {navigation.map((section:any) => (
                         <li key={section.title}>
                             <h2 className="font-display font-medium text-slate-900 dark:text-white">

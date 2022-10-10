@@ -1,21 +1,31 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { serialize, } from "next-mdx-remote/serialize";
+import { MDXRemote, } from "next-mdx-remote";
 import Header from "@pages/_components/Header";
 import Navigation from "@pages/_components/Navigation";
 
-function DocPage({ children, frontMatter,}:any) {
-    const { title, } = frontMatter;
-
+function DocPage({ children, frontMatter, mdxSource,}:any) {
+    const { title, description,} = frontMatter;
+    console.log(mdxSource);
     return (
         <div>
             <Header />
             <Navigation />
-            
+
             <main className="lg:pl-[310px]">
-                <h1>{title}</h1>
-                {children}        
+                <div>
+                    <h1>{title}</h1>
+                    <span>{description}</span>
+                </div>
+                <div>
+                    <MDXRemote {...mdxSource}/>
+                </div>
             </main>
+            <aside>
+                
+            </aside>
         </div>
     );  
 }
@@ -39,7 +49,7 @@ const getStaticProps = async ({ params: { slug,}, }:any) => {
     const markdownWithMeta = fs.readFileSync(path.join("src", "data", "docs", slug + ".mdx"), "utf-8");
   
     const { data: frontMatter, content, } = matter(markdownWithMeta);
-    const mdxSource = await content;
+    const mdxSource = await serialize(content);
   
     return {
         props: {

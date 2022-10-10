@@ -1,7 +1,8 @@
 import type { NextPage, } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import PageLayout from "./_components/PageLayout";
+import Header from "./_components/Header";
+import LayoutPage from "./_components/layouts/LayoutPage";
 
 const Home: NextPage = () => {
     return (
@@ -13,17 +14,15 @@ const Home: NextPage = () => {
             </Head>
 
             <main>
-                <PageLayout>
+                <LayoutPage>
 
+                  
 
-                    
                     <p className="text-2xl">Home Page</p>
                     <Link href="docs/installation">Installation</Link>
-                    <Link href="docs/buttons">button</Link>
+                    <Link href="docs/button">button</Link>
 
-
-
-                </PageLayout>
+                </LayoutPage>
             </main>
         </div>
     );
