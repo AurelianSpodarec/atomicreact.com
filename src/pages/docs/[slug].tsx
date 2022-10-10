@@ -1,19 +1,21 @@
-// import { Frontmatter, } from "types/frontmatter";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Header from "@pages/_components/Header";
+import Navigation from "@pages/_components/Navigation";
 
 function DocPage({ children, frontMatter,}:any) {
     const { title, } = frontMatter;
-    // console.log(frontMatter);
+
     return (
         <div>
-            <h1>hi</h1>
-            <p>{title}</p>
+            <Header />
+            <Navigation />
             
-            <div>
+            <main className="lg:pl-[310px]">
+                <h1>{title}</h1>
                 {children}        
-            </div>
+            </main>
         </div>
     );  
 }
