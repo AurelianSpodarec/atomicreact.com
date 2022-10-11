@@ -5,10 +5,15 @@ import { serialize, } from "next-mdx-remote/serialize";
 import { MDXRemote, } from "next-mdx-remote";
 import Header from "@pages/_components/Header";
 import Navigation from "@pages/_components/Navigation";
+import Button from "@components/atoms/Button/Button";
+import Prose from "@components/components/Prose";
+
+
+const components = { Button, Prose,};
 
 function DocPage({ children, frontMatter, mdxSource,}:any) {
     const { title, description,} = frontMatter;
-    console.log(mdxSource);
+   
     return (
         <div>
             <Header />
@@ -20,11 +25,11 @@ function DocPage({ children, frontMatter, mdxSource,}:any) {
                     <span>{description}</span>
                 </div>
                 <div>
-                    <MDXRemote {...mdxSource}/>
+                    <MDXRemote {...mdxSource} components={components} />
                 </div>
             </main>
             <aside>
-                
+
             </aside>
         </div>
     );  
