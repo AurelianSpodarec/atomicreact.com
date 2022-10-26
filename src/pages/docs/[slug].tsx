@@ -62,11 +62,11 @@ export async function getStaticProps(context:any) {
     
     const result = await bundleMDX({
         source: mdxSource,
-        // mdxOptions(options) {
-        //     options.remarkPlugins = [...(options.remarkPlugins ?? []), [smartypants,],];
-        //     options.rehypePlugins = [...(options.rehypePlugins ?? []), [rehypePrism,],];
-        //     return options;
-        // },
+        mdxOptions(options) {
+            options.remarkPlugins = [...(options.remarkPlugins ?? []), [smartypants,],];
+            options.rehypePlugins = [...(options.rehypePlugins ?? []), [rehypePrism,],];
+            return options;
+        },
     });
 
     return {

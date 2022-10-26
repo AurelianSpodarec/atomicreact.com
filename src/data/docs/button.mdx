@@ -2,11 +2,7 @@
 title: Buttons
 description: yeyeye
 ---
- 
-// import Button from './../../components/atoms/Button/Button'
-// import Button from "@components/atoms/Button/Button";
-
-
+  
 
 <Button label="Primary" variant="primary" />
 <Button label="Secondary" variant="secondary" />
@@ -16,8 +12,7 @@ description: yeyeye
 <Button label="Danger" variant="danger" />
 
 
-```js line=2, 4-5
-import Button from './../../components/atoms/Button/Button';
+```js
 <Button label="Primary" variant="primary" />
 <Button label="Secondary" variant="secondary" />
 <Button label="Success" variant="success" />
@@ -26,20 +21,65 @@ import Button from './../../components/atoms/Button/Button';
 <Button label="Danger" variant="danger" />
 ```
 
-## Examples
+## Outline buttons
+<Button label="Primary" kind="outline" variant="primary" />
+<Button label="Secondary" kind="outline" variant="secondary" />
+<Button label="Success" kind="outline" variant="success" />
+<Button label="Info" kind="outline" variant="info" />
+<Button label="Warning" kind="outline" variant="warning" />
+<Button label="Danger" kind="outline" variant="danger" />
 
-Use any of the following for a solid Buttons
 
-piece of code here
+```js
+<Button label="Primary" kind="outline" variant="primary" />
+<Button label="Secondary" kind="outline" variant="secondary" />
+<Button label="Success" kind="outline" variant="success" />
+<Button label="Info" kind="outline" variant="info" />
+<Button label="Warning" kind="outline" variant="warning" />
+<Button label="Danger" kind="outline" variant="danger" />
+```
 
-```js line=2, 4-5
-/** @type {import('@tailwindlabs/lorem').ipsum} */
-export default {
-  lorem: 'ipsum',
-  dolor: ['sit', 'amet', 'consectetur'],
-  adipiscing: {
-    elit: true,
-  },
+
+## Subtle
+## Ghost
+## Link
+## Sizes
+## Button Tags
+
+## Active state
+<Button label="Primary" variant="primary" active />
+<Button label="Primary" kind="outline" variant="primary" active />
+
+## Disabled State
+<Button label="Primary" variant="primary" disabled />
+<Button label="Primary" kind="outline" variant="primary" disabled />
+
+
+## Loading State
+
+
+
+## API
+```js
+interface ButtonProps {
+    className?: string;
+    children?: React.ReactNode;
+    onClick?: any;
+    ref?: any;
+    label?: string;
+    as?: string | "a" | "button";
+    variant?: string | "primary" | "secondary" | "link" | "success" | "warning" | "danger" | "info";
+    kind?: string | "solid" | "outline" | "ghost" | "subtle";
+    type?: string | "submit" | "button" | "reset";
+    size?: string | "md";
+    radius?: string | "md";
+    href?: string;
+    block?: boolean;
+    active?: boolean;
+    disabled?: boolean;
+    isLoading?: boolean;
+
+    icon?: any;
+    iconPosition?: any;
 }
 ```
-
