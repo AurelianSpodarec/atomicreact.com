@@ -1,4 +1,3 @@
-import { useCallback, useEffect, useState, } from "react";
 import Link from "next/link";
 import { useRouter, } from "next/router";
 import Navigation from "../Navigation";
@@ -66,7 +65,7 @@ const navigation = [
 
  
 
-function LayoutPage({ children, title, tableOfContents, }:any) {
+function LayoutDocs({ children, title, tableOfContents, }:any) {
     let router = useRouter();
     let isHomePage = router.pathname === "/";
     let allLinks = navigation.flatMap((section) => section.links);
@@ -93,7 +92,7 @@ function LayoutPage({ children, title, tableOfContents, }:any) {
                     </div>
                 </div>
 
-                <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
+                <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 ml-64">
                     <article>
                         {(title || section) && (
                             <header className="mb-9 space-y-1">
@@ -120,4 +119,4 @@ function LayoutPage({ children, title, tableOfContents, }:any) {
     );
 }
 
-export default LayoutPage;
+export default LayoutDocs;

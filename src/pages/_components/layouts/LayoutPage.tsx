@@ -5,7 +5,9 @@ function LayoutPage({children,}:any) {
     return (
         <div>
             <Header />
-            {children}
+            <div className="ml-[400px]">
+                {children}
+            </div>
         </div>
     );
 }
