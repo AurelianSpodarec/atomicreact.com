@@ -8,6 +8,7 @@ import { getMDXComponent, } from "mdx-bundler/client";
 import smartypants from "remark-smartypants";
 import rehypePrism from "rehype-prism-plus";
 import LayoutDocs from "@pages/_components/layouts/LayoutDocs";
+import Button from "@components/atoms/Button/Button";
 
 // import { getAllPosts, getSinglePost, } from "@utils/mdx";
 
@@ -37,18 +38,20 @@ import LayoutDocs from "@pages/_components/layouts/LayoutDocs";
 //     }
 // };
 
+
 export default function Post({ code, frontmatter, }:any) {
     const Component = React.useMemo(() => getMDXComponent(code), [code,]);
-    // const { title, description, } = frontmatter;
-    console.log("frontmatter", frontmatter);
+    const { title, description, } = frontmatter;
+    
     return (
         <LayoutDocs>
             <div >
                 <div>
-                    {/* <h1>{title}</h1>
-                <span>{description}</span> */}
+                    <h1>{title}</h1>
+                    <span>{description}</span>
                 </div>
-                <Component />
+
+                <Component components={Button} />
             </div>
         </LayoutDocs>
     );
@@ -70,26 +73,29 @@ export async function getStaticPaths() {
         fallback: false,
     };
 }
+
+
 const ROOT_PATH = process.cwd();
 export const DATA_PATH = path.join(ROOT_PATH, "src/data");
 
 export async function getStaticProps(context:any) {
-    const mdxSource = fs.readFileSync(path.join(DATA_PATH, "docs", `${"button"}.mdx`), "utf8");
+    const mdxSource = fs.readFileSync(path.join(DATA_PATH, "docs", `${"radio"}.mdx`), "utf8");
     // const mdxSource = "## Hello World";
    
 
     const result = await bundleMDX({
         source: mdxSource,
-        mdxOptions(options) {
-            options.remarkPlugins = [...(options.remarkPlugins ?? []), [smartypants,],];
-            options.rehypePlugins = [...(options.rehypePlugins ?? []), [rehypePrism,],];
-            return options;
-        },
+        // mdxOptions(options) {
+        //     options.remarkPlugins = [...(options.remarkPlugins ?? []), [smartypants,],];
+        //     options.rehypePlugins = [...(options.rehypePlugins ?? []), [rehypePrism,],];
+        //     return options;
+        // },
     });
 
     return {
         props: {
             code: result.code,
+            frontmatter: result.frontmatter,
         },
     };
 }
