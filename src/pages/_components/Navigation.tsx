@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useRouter, } from "next/router";
 import clsx from "clsx";
-import { navigation, } from "@config/navigation";
 
+import { navigation, } from "@config/navigation";
 
 function Navigation({ className, }:any) {
     let router = useRouter();

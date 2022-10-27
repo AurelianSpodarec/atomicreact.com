@@ -3,15 +3,15 @@ import Link from "next/link";
 
 function Header() {
     return (
-        <header className="sticky top-0">
-            <nav className="relative mx-auto flex bg-gray-800 items-center justify-between px-4 sm:px-6" aria-label="Global">
+        <header className="sticky top-0 z-40">
+            <nav className="relative backdrop-blur mx-auto flex bg-gray-800/75 items-center justify-between px-4 sm:px-6" aria-label="Global">
 
 
                 <div className="flex flex-1 py-3 items-center">
                     <div className="flex w-full items-center justify-between md:w-auto">
 
-                        <Link href="/" className="flex items-center space-x-4">
-                            <>
+                        <Link href="/">
+                            <a className="flex items-center space-x-4">
                                 <span className="sr-only">Your Company</span>
                                 
                                 <div className="h-8 w-auto sm:h-10">
@@ -19,7 +19,7 @@ function Header() {
                                 </div>
 
                                 <span className="text-xl text-white font-bold">Atomic React</span>
-                            </>
+                            </a>
                         </Link>
 
                         <div className="-mr-2 flex items-center md:hidden">
@@ -35,7 +35,7 @@ function Header() {
 
                     <div className="hidden space-x-8 md:ml-10 md:flex">
                         <Link href="/docs">
-                            <a className="font-medium text-white hover:text-gray-300" >Get started</a>
+                            <a className="font-medium text-white hover:text-gray-300">Get started</a>
                         </Link>
                         <Link className="font-medium text-white hover:text-gray-300" href="/docs">
                             <a className="font-medium text-white hover:text-gray-300" >Docs</a>

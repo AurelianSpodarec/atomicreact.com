@@ -15,12 +15,12 @@ const components = {
     Button,
 };
 
-export default function Post({ code, frontmatter, }:any) {
+export default function Post({ code, frontmatter, mdxSource,}:any) {
     const Component = React.useMemo(() => getMDXComponent(code), [code,]);
     const { title, description, } = frontmatter;
-
+    
     return (
-        <LayoutDocs>
+        <LayoutDocs pageProps={{code, frontmatter, mdxSource,}}>
             <div >
                 <div>
                     <h1>{title}</h1>
@@ -71,6 +71,7 @@ export async function getStaticProps(context:any) {
         props: {
             code: result.code,
             frontmatter: result.frontmatter,
+            mdxSource,
         },
     };
 }

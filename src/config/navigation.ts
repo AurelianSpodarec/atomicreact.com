@@ -22,9 +22,6 @@ export const navigation = [
         title: "Molecules",
         links: [
             { title: "CacheAdvance.predict()", href: "/docs/cacheadvance-predict", },
-            { title: "CacheAdvance.flush()", href: "/docs/cacheadvance-flush", },
-            { title: "CacheAdvance.revert()", href: "/docs/cacheadvance-revert", },
-            { title: "CacheAdvance.regret()", href: "/docs/cacheadvance-regret", },
         ],
     },
     {
