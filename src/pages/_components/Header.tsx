@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 function Header() {
@@ -12,7 +13,8 @@ function Header() {
                         <Link href="/" className="flex items-center space-x-4">
                             <>
                                 <span className="sr-only">Your Company</span>
-                                <img className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=500" alt=""/>
+                                
+                                <Image className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=500" alt=""/>
                                 <span className="text-xl text-white font-bold">Atomic React</span>
                             </>
                         </Link>

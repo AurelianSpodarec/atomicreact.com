@@ -9,8 +9,6 @@ import smartypants from "remark-smartypants";
 import rehypePrism from "rehype-prism-plus";
 import LayoutDocs from "@pages/_components/layouts/LayoutDocs";
 import Button from "@components/atoms/Button/Button";
-
-// import { getAllPosts, getSinglePost, } from "@utils/mdx";
  
 
 const components = {
