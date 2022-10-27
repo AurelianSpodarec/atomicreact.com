@@ -14,7 +14,10 @@ function Header() {
                             <>
                                 <span className="sr-only">Your Company</span>
                                 
-                                <Image className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=500" alt=""/>
+                                <div className="h-8 w-auto sm:h-10">
+                                    {/* <Image className="h-8 w-auto sm:h-10" layout="fill" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=500" alt=""/> */}
+                                </div>
+
                                 <span className="text-xl text-white font-bold">Atomic React</span>
                             </>
                         </Link>
@@ -31,11 +34,21 @@ function Header() {
                 <div className="hidden md:flex space-x-10">
 
                     <div className="hidden space-x-8 md:ml-10 md:flex">
-                        <Link className="font-medium text-white hover:text-gray-300" href="/docs">Get started</Link>
-                        <Link className="font-medium text-white hover:text-gray-300" href="/docs">Docs</Link>
-                        <Link className="font-medium text-white hover:text-gray-300" href="/docs">Components</Link>
-                        <Link className="font-medium text-white hover:text-gray-300" href="/pages">Pages</Link>    
-                        <Link className="font-medium text-white hover:text-gray-300" href="/docs">Resources</Link>
+                        <Link href="/docs">
+                            <a className="font-medium text-white hover:text-gray-300" >Get started</a>
+                        </Link>
+                        <Link className="font-medium text-white hover:text-gray-300" href="/docs">
+                            <a className="font-medium text-white hover:text-gray-300" >Docs</a>
+                        </Link>
+                        <Link className="font-medium text-white hover:text-gray-300" href="/docs">
+                            <a className="font-medium text-white hover:text-gray-300" >Components</a>
+                        </Link>
+                        <Link className="font-medium text-white hover:text-gray-300" href="/pages">
+                            <a className="font-medium text-white hover:text-gray-300" >Pages</a>
+                        </Link>    
+                        <Link className="font-medium text-white hover:text-gray-300" href="/docs">
+                            <a className="font-medium text-white hover:text-gray-300" >Resources</a>
+                        </Link>
                     </div>
 
                     <div className="flex space-x-6">

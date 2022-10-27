@@ -1,7 +1,7 @@
 import type { NextPage, } from "next";
 import Head from "next/head";
-import Link from "next/link";
-import Header from "./_components/Header";
+ 
+import Hero from "./_components/Hero";
 import LayoutPage from "./_components/layouts/LayoutPage";
 
 const Home: NextPage = () => {
@@ -13,17 +13,36 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main>
+            <div>
                 <LayoutPage>
-
                   
-
-                    <p className="text-2xl">Home Page</p>
-                    <Link href="docs/installation">Installation</Link>
-                    <Link href="docs/button">button</Link>
+                    <Hero />
+                     
+                    {/* <Link href="docs/installation">Installation</Link> */}
+                    {/* <Link href="docs/button">button</Link> */}
 
                 </LayoutPage>
-            </main>
+
+                {/* <section>
+                    Try it out Playground
+
+                    Button
+                </section>
+
+                <section>
+                    If you need a static website, try Versoly
+                </section>
+
+                <section>
+                    Theming
+                    TailwindCSS
+                    React
+                    NextJS
+
+                    Small file size, customisable
+
+                </section> */}
+            </div>
         </div>
     );
 };
