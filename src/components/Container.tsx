@@ -15,7 +15,7 @@ function Container({ children, className = "hwees", style, size, }: ContainerPro
     return (
         <div
             style={style}
-            className={`${className} container ${size ? `container--${options[size]}` : "container--fluid"}`}
+            className={`${className} mx-auto container ${size ? `container--${options[size]}` : "container--fluid"}`}
         >
             {children}
         </div>

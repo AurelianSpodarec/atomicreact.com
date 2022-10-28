@@ -1,9 +1,16 @@
+import ThemeSelector from "@components/ThemeSelector";
 import Image from "next/image";
 import Link from "next/link";
+ 
 
 function Header() {
     return (
         <header className="sticky top-0 z-40">
+
+            <div className="text-center py-3 text-sm text-gray-200">
+                React Atoms BETA launched!
+            </div>
+
             <nav className="relative backdrop-blur mx-auto flex bg-gray-800/75 items-center justify-between px-4 sm:px-6" aria-label="Global">
 
 
@@ -18,7 +25,7 @@ function Header() {
                                     {/* <Image className="h-8 w-auto sm:h-10" layout="fill" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=500" alt=""/> */}
                                 </div>
 
-                                <span className="text-xl text-white font-bold">Atomic React</span>
+                                <span className="text-xl text-white font-bold">React Atoms</span>
                             </a>
                         </Link>
 
@@ -29,8 +36,8 @@ function Header() {
                     </div>
                 
                 </div>
-
-
+                <ThemeSelector />
+        
                 <div className="hidden md:flex space-x-10">
 
                     <div className="hidden space-x-8 md:ml-10 md:flex">

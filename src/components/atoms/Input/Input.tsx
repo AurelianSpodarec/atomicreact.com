@@ -1,6 +1,9 @@
 function Input() {
     return (
-        <input />
+        <>
+            <input />
+            <label></label>
+        </>
     );
 }
 

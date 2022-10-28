@@ -3,7 +3,8 @@ import Head from "next/head";
  
 import Hero from "./_components/Hero";
 import LayoutPage from "./_components/layouts/LayoutPage";
-
+import SecondaryFeatures from "./_components/SecondaryFeatures";
+ 
 const Home: NextPage = () => {
     return (
         <div>
@@ -17,7 +18,7 @@ const Home: NextPage = () => {
                 <LayoutPage>
                   
                     <Hero />
-                     
+                    <SecondaryFeatures />
                     {/* <Link href="docs/installation">Installation</Link> */}
                     {/* <Link href="docs/button">button</Link> */}
 

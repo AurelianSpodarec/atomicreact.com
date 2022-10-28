@@ -77,7 +77,7 @@ function LayoutDocs({ children, title, pageProps, }:any) {
    
     console.log(tableOfContents);
     return (
-        <div className="bg-slate-700">
+        <div className="bg-gray-800">
             <Header />
 
             <div className="relative mx-auto flex">
