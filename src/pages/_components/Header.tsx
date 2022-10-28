@@ -6,14 +6,14 @@ import Link from "next/link";
 function Header() {
     return (
         <>
-            <div className="text-center py-3 text-sm text-gray-200">
-                React Atoms BETA launched!
+            <div className="text-center py-3 text-sm text-gray-50 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                React Atoms BETA launched! <Link href="/"><span className="font-bold underline">Read More here!</span></Link>
             </div>
 
-            <header className="sticky top-0 z-40">
+            <header className="sticky top-0 z-40 shadow-md shadow-slate-900/5">
 
           
-                <nav className="relative backdrop-blur mx-auto flex bg-gray-800/75 items-center justify-between px-4 sm:px-6" aria-label="Global">
+                <nav className="relative backdrop-blur mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
 
 
                     <div className="flex flex-1 py-3 items-center">
@@ -27,7 +27,7 @@ function Header() {
                                         {/* <Image className="h-8 w-auto sm:h-10" layout="fill" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=500" alt=""/> */}
                                     </div>
 
-                                    <span className="text-xl text-white font-bold">React Atoms</span>
+                                    <span className="text-xl text-slate-900 font-bold">React Atoms</span>
                                 </a>
                             </Link>
 
@@ -38,25 +38,24 @@ function Header() {
                         </div>
                 
                     </div>
-                    <ThemeSelector />
         
                     <div className="hidden md:flex space-x-10">
 
                         <div className="hidden space-x-8 md:ml-10 md:flex">
                             <Link href="/docs">
-                                <a className="font-medium text-white hover:text-gray-300">Get started</a>
+                                <a className="font-medium text-slate-900 hover:text-gray-300">Get started</a>
                             </Link>
-                            <Link className="font-medium text-white hover:text-gray-300" href="/docs">
-                                <a className="font-medium text-white hover:text-gray-300" >Docs</a>
+                            <Link href="/docs">
+                                <a className="font-medium text-slate-900 hover:text-gray-300">Docs</a>
                             </Link>
-                            <Link className="font-medium text-white hover:text-gray-300" href="/docs">
-                                <a className="font-medium text-white hover:text-gray-300" >Components</a>
+                            <Link href="/docs">
+                                <a className="font-medium text-slate-900 hover:text-gray-300">Components</a>
                             </Link>
-                            <Link className="font-medium text-white hover:text-gray-300" href="/pages">
-                                <a className="font-medium text-white hover:text-gray-300" >Pages</a>
+                            <Link href="/pages">
+                                <a className="font-medium text-slate-900 hover:text-gray-300">Pages</a>
                             </Link>    
-                            <Link className="font-medium text-white hover:text-gray-300" href="/docs">
-                                <a className="font-medium text-white hover:text-gray-300" >Resources</a>
+                            <Link href="/docs">
+                                <a className="font-medium text-slate-900 hover:text-gray-300">Resources</a>
                             </Link>
                         </div>
 

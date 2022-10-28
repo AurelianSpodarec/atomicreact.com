@@ -19,37 +19,7 @@ const Home: NextPage = () => {
                   
                     <Hero />
                     <SecondaryFeatures />
-                    
-                    <section>
 
-                        <h2>Edge Case Scenarios Covered</h2>
-                        <p>Play with playground button component</p>
-
-                        <div>
-                            mini playground here
-                        </div>
-
-                    </section>
-
-                    <section>
-                        Accessible
-                        Testes
-                        Edge Case Scenarios
-                        Themable
-                        Team Structure
-                        Composable
-                        TailwindCSS
-                    </section>
-
-                    <section>
-                    Need a static website? Try Versoly
-                    </section>
-
-              
-
-                    <div>
-                Join Discord
-                    </div>
                 </LayoutPage>
 
                

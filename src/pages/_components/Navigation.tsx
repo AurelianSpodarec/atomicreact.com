@@ -9,7 +9,7 @@ function Navigation({ className, }:any) {
 
     return (
         <>
-            <div className="fixed h-screen w-[310px] text-base lg:text-sm">
+            <div className="fixed h-screen w-[310px] text-base lg:text-sm bg-slate-50">
                 <div className="relative">
                     <div className="absolute top-28 bottom-0 right-0 hidden w-px bg-slate-800 dark:block"></div>
 

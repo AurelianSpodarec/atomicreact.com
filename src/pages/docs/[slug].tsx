@@ -21,7 +21,7 @@ export default function Post({ code, frontmatter, mdxSource,}:any) {
     
     return (
         <LayoutDocs pageProps={{code, frontmatter, mdxSource,}}>
-            <div>
+            <div >
                 <div>
                     <h1 className="font-display text-3xl tracking-tight text-slate-900 dark:text-white">{title}</h1>
                     <p className="lead">{description}</p>

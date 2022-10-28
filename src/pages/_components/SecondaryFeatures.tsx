@@ -2,39 +2,40 @@ import Container from "@components/Container";
 import { useId, } from "react";
 
 
+ 
 const features = [
     {
-        name: "Invest any amount",
+        name: "TailwindCSS",
         description:
       "Whether it’s $1 or $1,000,000, we can put your money to work for you.",
         icon: DeviceArrowIcon,
     },
     {
-        name: "Build a balanced portfolio",
+        name: "Themable",
         description:
       "Invest in different industries to find the most opportunities to win huge.",
         icon: DeviceCardsIcon,
     },
     {
-        name: "Trade in real-time",
+        name: "Accessability",
         description:
       "Get insider tips on big stock moves and act on them within seconds.",
         icon: DeviceClockIcon,
     },
     {
-        name: "Profit from your network",
+        name: "Team Structure",
         description:
       "Invite new insiders to get tips faster and beat even other Pocket users.",
         icon: DeviceListIcon,
     },
     {
-        name: "Encrypted and anonymized",
+        name: "Composable",
         description:
       "Cutting-edge security technology that even the NSA doesn’t know about keeps you hidden.",
         icon: DeviceLockIcon,
     },
     {
-        name: "Portfolio tracking",
+        name: "Saving Time",
         description:
       "Watch your investments grow exponentially, leaving other investors in the dust.",
         icon: DeviceChartIcon,

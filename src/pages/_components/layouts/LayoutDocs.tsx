@@ -12,47 +12,47 @@ import Header from "../Header";
 
 
 
-function getNodeText(node:any) {
-    let text = "";
-    for (let child of node.children ?? []) {
-        if (typeof child === "string") {
-            text += child;
-        }
-        text += getNodeText(child);
-    }
-    return text;
-}
+// function getNodeText(node:any) {
+//     let text = "";
+//     for (let child of node.children ?? []) {
+//         if (typeof child === "string") {
+//             text += child;
+//         }
+//         text += getNodeText(child);
+//     }
+//     return text;
+// }
   
-function collectHeadings(nodes:any, slugify = slugifyWithCounter()):any {
-    let sections = [];
+// function collectHeadings(nodes:any, slugify = slugifyWithCounter()):any {
+//     let sections = [];
   
-    for (let node of nodes) {
-        if (node.name === "h2" || node.name === "h3") {
-            let title = getNodeText(node);
-            if (title) {
-                let id = slugify(title);
-                node.attributes.id = id;
-                if (node.name === "h3") {
-                    if (!sections[sections.length - 1]) {
-                        throw new Error(
-                            "Cannot add `h3` to table of contents without a preceding `h2`"
-                        );
-                    }
-                    sections[sections.length - 1].children.push({
-                        ...node.attributes,
-                        title,
-                    });
-                } else {
-                    sections.push({ ...node.attributes, title, children: [], });
-                }
-            }
-        }
+//     for (let node of nodes) {
+//         if (node.name === "h2" || node.name === "h3") {
+//             let title = getNodeText(node);
+//             if (title) {
+//                 let id = slugify(title);
+//                 node.attributes.id = id;
+//                 if (node.name === "h3") {
+//                     if (!sections[sections.length - 1]) {
+//                         throw new Error(
+//                             "Cannot add `h3` to table of contents without a preceding `h2`"
+//                         );
+//                     }
+//                     sections[sections.length - 1].children.push({
+//                         ...node.attributes,
+//                         title,
+//                     });
+//                 } else {
+//                     sections.push({ ...node.attributes, title, children: [], });
+//                 }
+//             }
+//         }
   
-        sections.push(...collectHeadings(node.children ?? [], slugify));
-    }
+//         sections.push(...collectHeadings(node.children ?? [], slugify));
+//     }
   
-    return sections;
-}
+//     return sections;
+// }
 
   
 
@@ -69,13 +69,13 @@ function LayoutDocs({ children, title, pageProps, }:any) {
         section.links.find((link) => link.href === router.pathname)
     );
 
-    console.log("sdsd", pageProps.mdxSource);
+    // console.log("sdsd", pageProps.mdxSource);
 
-    let tableOfContents = pageProps.mdxSource
-        ? collectHeadings(pageProps.mdxSource)
-        : [];
+    // let tableOfContents = pageProps.mdxSource
+    //     ? collectHeadings(pageProps.mdxSource)
+    //     : [];
    
-    console.log(tableOfContents);
+    // console.log(tableOfContents);
     return (
         <div className="dark:bg-gray-800">
             <Header />
@@ -92,7 +92,7 @@ function LayoutDocs({ children, title, pageProps, }:any) {
                 </div>
 
 
-                <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 ml-[20rem]">
+                <div className="min-w-0 max-w-2xl bg-white flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16 ml-[20rem]">
                     <article className="max-w-4xl xl:mr-[10.5rem]">
                         {(title || section) && (
                             <header className="mb-9 space-y-1">
