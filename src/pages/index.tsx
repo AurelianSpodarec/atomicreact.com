@@ -19,41 +19,42 @@ const Home: NextPage = () => {
                   
                     <Hero />
                     <SecondaryFeatures />
-                    {/* <Link href="docs/installation">Installation</Link> */}
-                    {/* <Link href="docs/button">button</Link> */}
+                    
+                    <section>
 
-                </LayoutPage>
+                        <h2>Edge Case Scenarios Covered</h2>
+                        <p>Play with playground button component</p>
 
-                <section>
+                        <div>
+                            mini playground here
+                        </div>
 
-                    <h2>Edge Case Scenarios Covered</h2>
-                    <p>Play with playground button component</p>
+                    </section>
 
-                    <div>
-                        mini playground here
-                    </div>
-                   
-                </section>
+                    <section>
+                        Accessible
+                        Testes
+                        Edge Case Scenarios
+                        Themable
+                        Team Structure
+                        Composable
+                        TailwindCSS
+                    </section>
 
-                <section>
-                    Accessible
-                    Testes
-                    Edge Case Scenarios
-                    Themable
-                    Team Structure
-                    Composable
-                    TailwindCSS
-                </section>
-
-                <section>
+                    <section>
                     Need a static website? Try Versoly
-                </section>
+                    </section>
 
               
 
-                <div>
+                    <div>
                 Join Discord
-                </div>
+                    </div>
+                </LayoutPage>
+
+               
+
+              
             </div>
         </div>
     );

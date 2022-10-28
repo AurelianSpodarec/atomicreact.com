@@ -47,31 +47,31 @@ function SystemIcon(props:any) {
 function ThemeSelector(props:any) {
     let [selectedTheme, setSelectedTheme,] = useState();
 
-    useEffect(() => {
-        if (selectedTheme) {
-            document.documentElement.setAttribute("data-theme", selectedTheme.value);
-        } else {
-            setSelectedTheme(
-                themes.find(
-                    (theme) =>
-                        theme.value === document.documentElement.getAttribute("data-theme")
-                )
-            );
-        }
-    }, [selectedTheme,]);
+    // useEffect(() => {
+    //     if (selectedTheme) {
+    //         document.documentElement.setAttribute("data-theme", selectedTheme.value);
+    //     } else {
+    //         setSelectedTheme(
+    //             themes.find(
+    //                 (theme) =>
+    //                     theme.value === document.documentElement.getAttribute("data-theme")
+    //             )
+    //         );
+    //     }
+    // }, [selectedTheme,]);
 
-    useEffect(() => {
-        let handler = () =>
-            setSelectedTheme(
-                themes.find(
-                    (theme) => theme.value === (window.localStorage.theme ?? "system")
-                )
-            );
+    // useEffect(() => {
+    //     let handler = () =>
+    //         setSelectedTheme(
+    //             themes.find(
+    //                 (theme) => theme.value === (window.localStorage.theme ?? "system")
+    //             )
+    //         );
 
-        window.addEventListener("storage", handler);
+    //     window.addEventListener("storage", handler);
 
-        return () => window.removeEventListener("storage", handler);
-    }, []);
+    //     return () => window.removeEventListener("storage", handler);
+    // }, []);
 
     return (
         <div>
