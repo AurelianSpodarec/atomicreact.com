@@ -6,7 +6,7 @@ import Link from "next/link";
 function Header() {
     return (
         <>
-            <div className="text-center py-3 text-sm text-gray-50 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+            <div className="text-center py-2 text-sm text-gray-50 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                 React Atoms BETA launched! <Link href="/"><span className="font-bold underline">Read More here!</span></Link>
             </div>
 

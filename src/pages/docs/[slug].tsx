@@ -8,12 +8,17 @@ import { getMDXComponent, } from "mdx-bundler/client";
 import smartypants from "remark-smartypants";
 import rehypePrism from "rehype-prism-plus";
 import LayoutDocs from "@pages/_components/layouts/LayoutDocs";
-import Button from "@components/atoms/Button/Button";
- 
 
+import Button from "@components/atoms/Button/Button";
+import Input from "@components/atoms/Input/Input";
+import Text from "@components/atoms/Text/Text";
+ 
 const components = {
     Button,
+    Input,
+    Text,
 };
+
 
 export default function Post({ code, frontmatter, mdxSource,}:any) {
     const Component = React.useMemo(() => getMDXComponent(code), [code,]);
