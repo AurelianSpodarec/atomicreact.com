@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import Link from "next/link";
 
 // TODO: If 'href' is provided, automatically render 'a' tag and ovveride any input in 'as'.
 // TODO: Create reusable types for sizes
@@ -51,7 +52,7 @@ interface ButtonProps {
     onClick?: any;
     ref?: any;
     label?: string;
-    as?: string | "a" | "button";
+    as?: string | "a" | "button" | "link";
     variant?: string | "primary" | "secondary" | "link" | "success" | "warning" | "danger" | "info";
     kind?: string | "solid" | "outline" | "ghost" | "subtle";
     type?: string | "submit" | "button" | "reset";
