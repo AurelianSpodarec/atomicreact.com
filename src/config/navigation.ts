@@ -18,18 +18,18 @@ export const navigation = [
             { title: "Section", href: "/docs/section", },
         ],
     },
-    {
-        title: "Molecules",
-        links: [
-            { title: "CacheAdvance.predict()", href: "/docs/cacheadvance-predict", },
-        ],
-    },
-    {
-        title: "Organisms",
-        links: [
-            { title: "How to contribute", href: "/docs/how-to-contribute", },
-            { title: "Architecture guide", href: "/docs/architecture-guide", },
-            { title: "Design principles", href: "/docs/design-principles", },
-        ],
-    },
+    // {
+    //     title: "Molecules",
+    //     links: [
+    //         { title: "CacheAdvance.predict()", href: "/docs/cacheadvance-predict", },
+    //     ],
+    // },
+    // {
+    //     title: "Organisms",
+    //     links: [
+    //         { title: "How to contribute", href: "/docs/how-to-contribute", },
+    //         { title: "Architecture guide", href: "/docs/architecture-guide", },
+    //         { title: "Design principles", href: "/docs/design-principles", },
+    //     ],
+    // },
 ];

@@ -4,7 +4,7 @@ import Header from "../Header";
 
 function LayoutPage({children,}:any) {
     return (
-        <div className="dark:bg-gray-800">
+        <div className="bg-white dark:bg-gray-800">
             <Header />
             <main className="">
                 {children}

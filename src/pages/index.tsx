@@ -1,3 +1,4 @@
+import Button from "@components/atoms/Button/Button";
 import type { NextPage, } from "next";
 import Head from "next/head";
  
@@ -19,6 +20,55 @@ const Home: NextPage = () => {
                   
                     <Hero />
                     <SecondaryFeatures />
+
+                    Brad Frost Atomic Design
+
+                    Support Almost -All- Edge Case Scenario
+
+                    Flexible
+
+                    <section>
+                        Scale and Maintanability
+                        Atomic Desing
+
+
+
+                    </section>
+
+
+                    <section>
+                        Dont re-invet the wheel
+
+
+                        xs sm md lg xl xl2 xl3
+                    </section>
+
+
+                    TailwindCSS Friendly
+                    Customise
+
+                    <section>
+                        <div>
+                    Button
+                    Input
+                    Checkox
+                    Text
+                        </div>
+
+                        <div>
+                        Playground
+                        </div>
+                    </section>
+
+
+                    <section className="flex justify-between bg-blue-600">
+                        <div>
+                            Connect with Community
+                        </div>
+
+                        <Button label="Join Atomic React" />
+                  
+                    </section>
 
                 </LayoutPage>
 
