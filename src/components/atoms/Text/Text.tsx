@@ -38,6 +38,7 @@ const weights: any = {
 function Text({
     title,
     children,
+    id,
     type,
     size,
     weight = "normal",
@@ -52,7 +53,7 @@ function Text({
 
     if (!Tag) return <></>;
     return (
-        <Tag style={style} className={customClassName}>
+        <Tag style={style} id={id} className={customClassName}>
             {title ? title : children}
         </Tag>
     );
@@ -63,6 +64,7 @@ export default Text;
 interface TextProps {
     title?: string;
     children?: ReactNode;
+    id?: string;
     type?: "p" | "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
     size?: "xs" | "sm" | "md" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
     weight?:

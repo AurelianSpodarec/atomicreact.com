@@ -42,24 +42,24 @@ function Header() {
                     <div className="hidden md:flex space-x-10">
 
                         <div className="hidden space-x-8 md:ml-10 md:flex">
-                            <Link href="/docs">
+                            {/* <Link href="/docs">
                                 <a className="font-medium text-slate-900 hover:text-gray-300">Get started</a>
-                            </Link>
+                            </Link> */}
                             <Link href="/docs">
                                 <a className="font-medium text-slate-900 hover:text-gray-300">Docs</a>
                             </Link>
-                            <Link href="/showcase">
+                            {/* <Link href="/showcase">
                                 <a className="font-medium text-slate-900 hover:text-gray-300">Showcase</a>
-                            </Link>
-                            <Link href="/components">
+                            </Link> */}
+                            {/* <Link href="/components">
                                 <a className="font-medium text-slate-900 hover:text-gray-300">Components</a>
-                            </Link>
-                            <Link href="/pages">
+                            </Link> */}
+                            {/* <Link href="/pages">
                                 <a className="font-medium text-slate-900 hover:text-gray-300">Pages</a>
-                            </Link>    
-                            <Link href="/resources">
+                            </Link>     */}
+                            {/* <Link href="/resources">
                                 <a className="font-medium text-slate-900 hover:text-gray-300">Resources</a>
-                            </Link>
+                            </Link> */}
                         </div>
 
                         <div className="flex space-x-6">
